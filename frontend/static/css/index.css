@@ -1,0 +1,116 @@
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: #222222;
+}
+
+.nav__link {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+a {
+    color: #009579;
+}
+
+
+
+
+/* dzveli css */
+/*
+
+#header {
+    text-align: left;
+}
+
+#side-bar-left {
+    float: left;
+    width: 20%;
+}
+
+#main {
+    float: left;
+    width: 60%;
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: orange;
+    display: table; // es da qveda tu mtlainze minda 
+    box-sizing: border-box; // es da qveda tu mtlainze minda 
+}
+
+li {
+    float: left;
+    display: table-cell; // es da qveda tu mtlainze minda 
+}
+
+li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.vertical-menu {
+    float: left;
+}
+
+.vertical-menu a {
+    background-color: hotpink;
+    color: green;
+    display: block;
+    padding: 16px;
+    text-decoration: blue;
+}
+
+.vertical-menu a.active {
+    background-color: deeppink;
+    color: white;
+}
+
+
+.topnav {
+    float: right;
+}
+
+.text-holder {
+    float: right;
+    background-color: darkblue;
+    color: white;
+}
+
+*/
