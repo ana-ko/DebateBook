@@ -1,8 +1,8 @@
-const express = require("express");
-const path = require("path");
+var express = require("express");
+var path = require("path");
 
-const app = express();
-const apiRouter = require("./api/router")
+var app = express();
+var apiRouter = require("./api/router")
 
 
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));

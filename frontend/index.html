@@ -8,17 +8,57 @@
 
 </head>
 
-<body>
-	<nav class="nav">
-		<a href="/" class="nav__link" data-link>Dashboard</a>
-		<a href="/posts" class="nav__link" data-link>Posts</a>
-		<a href="/settings" class="nav__link" data-link>Settings</a>
-	</nav>
+<bod>
+	<div class="flex-container">
+	
+		<div class="nav">
+			<div class="nav-links-wrapper">
+				<a href="/posts" id="posts-nav" class="nav__link" data-link>Posts</a>
+				<a href="/myProfile" id="my-profile-nav" class="nav__link" data-link>My Profile</a>
+				<a href="/myPosts" id="my-posts-nav" class="nav__link" data-link>My Posts</a>
+				<a href="/myOpinions" id="my-opinions-nav" class="nav__link" data-link>My Opinions</a>
+				<a href="/settings" id="settings-nav" class="nav__link" data-link>Settings</a>
+				
+			</div>
 
-	<div id="app"></div>
+			<div class="nav-buttons">
+				<button class="nav-button" id="nav-login-button">Login</button>
+				<button class="nav-button" id="nav-register-button">Register</button>
+				<button class="nav-button" id="nav-logout-button">Logout</button>		
+			</div>
+		</div>
+		
+		<div id="app" class="flex-item-right"></div>
+
+	</div>
+
 
 	<script type="module" src="/static/js/index.js"></script>
+	<script>
+		var loginButton = document.querySelector("#nav-login-button");
+		var registerButton = document.querySelector("#nav-register-button");
+		var logoutButton = document.querySelector("#nav-logout-button");
+		
+		var manuallyNavigateToUrl = (url) => {
+			var a = document.createElement("a");
+			a.style.display = "none";
+			a.href = url;
+			document.body.appendChild(a);
+			a.click();
+			a.remove();
+		}
 
+		loginButton.onclick = () => {
+			manuallyNavigateToUrl("/login");
+		}
+		registerButton.onclick = () => {
+			manuallyNavigateToUrl("/register");
+		}
+		logoutButton.onclick = () => {
+			localStorage.removeItem("user");
+			manuallyNavigateToUrl("/login");
+		}
+	</script>
 
 </body>
 
